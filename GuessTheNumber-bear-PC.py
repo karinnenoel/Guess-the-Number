@@ -1,4 +1,4 @@
-#G#Guess the Number Game
+#Guess the Number Game
 import random
 
 guessesTaken = 0
@@ -14,7 +14,7 @@ while guessesTaken < 6:
       guess = input()
       guess = int(guess)
 
-      gussesTaken = gussesTaken + 1
+      gussesTaken = + 1
 
       if guess < number:
             print('Your guess is too low.')
