@@ -6,15 +6,25 @@ guessesTaken = 0
 print('Hello! Welcome to The Guess the Number Game. What is your name?')
 myName = input()
 
-number = random.randint(1, 100)
-print ('Well, ' + myName + ', I am thinking of a number between 1 and 100.')
+print(+ myName +', please choose the maximum number in your range.')
+maxNumber = input()
+
+print(+ myName +', please choose the minimum number in your range.') 
+minNumber = input()
+
+
+number = random.randint(minNumber, maxNumber)
+print ('Well, ' + myName + ', I am thinking of a number between' + minNumber + 'and' + maxNumber +.)
 
 while guessesTaken < 6:
       print('Take a guess.')
       guess = input()
       guess = int(guess)
 
-      gussesTaken = + 1
+      guessesTaken = guessesTaken + 1
+
+      if guessesTaken == 6:
+           break
 
       if guess < number:
             print('Your guess is too low.')
@@ -27,7 +37,7 @@ while guessesTaken < 6:
 
 if guess == number:
       guessesTaken =str(guessesTaken)
-      print('Good jod, ' + myName + '! You guessed my number in ' + guessesTaken + ' guesses! ')
+      print('Good job, ' + myName + '! You guessed my number in ' + guessesTaken + ' guesses! ')
 
 if guess != number:
       number = str(number)
